@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Karen's lovely contact form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <style type="text/css">
+    .form-well {
+    background: #fff;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+.form-well .form-well{
+    border:none;
+    box-shadow:none;
+}
+.grey-txt {
+    color: #025789;
+}
+.form-well legend {
+    font-size: 25px;
+    margin: 10px 0 25px;
+}
+.group {
+    position: relative;
+    margin-bottom: 35px;
+}
+input {
+    font-size: 18px;
+    padding: 5px 10px 10px 5px;
+    display: block;
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+}
+input:focus {
+    outline: none;
+}
+/* LABEL ======================================= */
+
+.form-well form label {
+    color: #484848;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+/* active state */
+
+.form-well form input:focus ~ label,
+.form-well form input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #484848;
+    left: 0;
+    border: none;
+}
+.form-well form textarea:focus ~ label,
+.form-well form textarea:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #484848;
+    left: 0;
+}
+/* BOTTOM BARS ================================= */
+
+.bar {
+    position: relative;
+    display: block;
+    width: 50%;
+}
+.bar:before,
+.bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #000000;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+.bar:before {
+    left: 50%;
+}
+.bar:after {
+    right: 50%;
+}
+/* active state */
+
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+    width: 50%;
+}
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 50px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+input:focus ~ .highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+.form-well form input,
+.form-well form textarea {
+    color: #000 !important;
+    border-bottom: solid 2px #ccc;
+    width: 50%;
+    height: 45px;
+}
+.form-well form textarea {
+    height: 135px;
+    border:none;
+    border-bottom: solid 2px #ccc;
+    border-top: solid 2px #ccc;
+}
+.form-well form .group label {
+    color: #484848;
+}
+.form-well input:focus,
+.form-well form textarea:focus {
+    padding: 5px 10px;
+}
+.form-well form .btn {
+    background: #e88f02;
+    width: 10px;
+    color: #fff !important;
+    padding: 10px;
+    position: relative;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: #fff;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #fff;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+@keyframes inputHighlighter {
+    from {
+        background: #fff;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+    </style>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        window.alert = function(){};
+        var defaultCSS = document.getElementById('bootstrap-css');
+        function changeCSS(css){
+            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
+            else $('head > link').filter(':first').replaceWith(defaultCSS); 
+        }
+        $( document ).ready(function() {
+          var iframe_height = parseInt($('html').height()); 
+          window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
+        });
+    </script>
+</head>
+<body>
+	</div>
+	<div class="col-sm-12 custom-box">
+	    <div class="col-md-6 col-md-offset-3">
+			 <div class="well form-well">
+				<div class="well form-well">
+					<legend class="black-txt text-center">Connect with us.</legend><br><strong>Let us help you connect to the people who know best.</strong><br>
+					<br>CONTACT US<br><br><br>
+					<form>
+						<div class="group">
+							<input required="" type="text">
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label>Full name *</label>
+						</div>
+
+						<div class="group">
+							<input required="" type="text">
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label>Email address *</label>
+						</div>
+
+						<div class="group">
+							<input notRequired="" type="text">
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label>Phone</label>
+						</div>
+						
+		       <div class="group">
+							<input required="" type="text">
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label>Title *</label>
+						</div>
+						
+						 <div class="group">
+							<input required="" type="text">
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label>Company *</label>
+						</div>
+						
+           <div class="form-group">
+        <span class="label-text">Preferred location *</span>
+               <span class="contact-error"></span>
+    </label>
+    <select name="preferred location" class="preferred location" id="preferred location">
+        <option value="preferred location...">Your preferred location...</option>
+      <option value="Arizona Modis-mesa">Arizona Modis-mesa</option>
+    </select>
+</div><br><br>
+
+          	 <div class="group">
+							<input notRequired="" type="text">
+							<span class="bar"></span>
+							<label>Questions or comments</label>
+						</div>
+<p>I have read and agreed with the terms of use, privacy and cookie policy. *<input type="checkbox" id="myCheck"  onclick="myFunction()"></right>
+
+
+<script>
+function myFunction() {
+    var = document.getElementById("myCheck");
+    if (checkBox.checked == true){
+        text.style.display = "block";
+    } else {
+       text.style.display = "none";
+    }
+}
+</script>
+						
+						</div>
+						<div class="group">
+				<div class="group">
+							<center> <button type="submit" class="btn btn-warning">Submit <span class="glyphicon glyphicon-send"></span></right></button>
+						</div>
+				
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; 
+}
+
+}
+</style>
+</head>
+<body>
+
+<h2>877.MODISIT or 877.663.4748</h2>
+
+<div class="row">
+  <div class="column" style="background-color:#FFFF;">
+    <h2>U.S. Corporate Headquarters</h2>
+    10151 Deerwood Park Boulevard<br>
+Building 200, Suite 400</br>
+Jacksonville, Florida 32256</br>
+Phone: 904.369.2300</br>
+Fax: 904.360.2110</br>
+info@modis.com</br>
+  </div>
+  <div class="column" style="background-color:#FFFF;">
+    <h2>Canada Corporate Headquarters</h2>
+    10 Bay Street, 7th Floor</br>
+Toronto, Ontario</br>
+M5J 2R8</br>
+Phone: 416.367.2020</br>
+Toll Free: 800.842.5907</br>
+Fax: 416.366.2001</br>
+toronto@modis.com</br>
+  </div>
+</div>
+
+</body>
+
